@@ -1,5 +1,5 @@
 /**
- * Week 2: KYC Chatbot Frontend
+ * KYC Chatbot Frontend
  * Manages conversation state and communicates with backend API
  */
 
