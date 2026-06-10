@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC FAQ Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>KYC FAQ Assistant</h1>
+            <p>Ask questions about Know Your Customer onboarding</p>
+        </div>
+
+        <!-- Chat Display Area -->
+        <div class="chat-box" id="chatBox">
+            <!-- Messages will appear here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Ask a KYC question..." 
+                autocomplete="off"
+            >
+            <button id="sendBtn">Send</button>
+        </div>
+
+        <!-- Status & Info -->
+        <div class="status">
+            <span id="status">Ready</span>
+            <span id="tokenInfo"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

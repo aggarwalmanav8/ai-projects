@@ -3,6 +3,7 @@ venv/
 
 # Environment variables (NEVER commit .env with your API key)
 .env
+.env.local
 
 # Python cache
 __pycache__/
