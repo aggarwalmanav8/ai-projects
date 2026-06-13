@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Document Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Classifier</h1>
+        <p class="subtitle">Classify Indian KYC documents</p>
+        
+        <form id="classifierForm">
+            <div class="form-group">
+                <label for="description">Document Description</label>
+                <textarea 
+                    id="description" 
+                    placeholder="E.g., I have a passport with my name John Doe, DOB 15-05-1990, and expiry date 2030"
+                    required
+                ></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Classify Document</button>
+        </form>
+        
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Classifying...</p>
+        </div>
+        
+        <div id="result" class="result hidden">
+            <div class="result-header">
+                <h2>Classification Result</h2>
+                <button id="closeResult" class="btn-close">✕</button>
+            </div>
+            
+            <div class="result-grid">
+                <div class="result-item">
+                    <label>Document Type</label>
+                    <div class="value"><span id="docType"></span> <span class="confidence" id="docTypeConf"></span></div>
+                </div>
+                
+                <div class="result-item">
+                    <label>Name</label>
+                    <div class="value"><span id="name"></span> <span class="confidence" id="nameConf"></span></div>
+                </div>
+                
+                <div class="result-item">
+                    <label>DOB</label>
+                    <div class="value"><span id="dob"></span> <span class="confidence" id="dobConf"></span></div>
+                </div>
+                
+                <div class="result-item full-width">
+                    <label>Action</label>
+                    <div class="value action" id="action"></div>
+                </div>
+            </div>
+            
+            <div class="raw-json">
+                <details>
+                    <summary>Raw JSON</summary>
+                    <pre id="rawJson"></pre>
+                </details>
+            </div>
+        </div>
+        
+        <div id="error" class="error hidden">
+            <div class="error-header">
+                <h3>Error</h3>
+                <button id="closeError" class="btn-close">✕</button>
+            </div>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
