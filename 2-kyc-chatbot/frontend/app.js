@@ -146,13 +146,9 @@ function addMessageToChat(role, message) {
     // Add text (with line breaks preserved)
     // Format the message: convert line breaks and preserve spacing
     const formattedMessage = message
-    .replace(/\n/g, '<br>')
-    .replace(/^### (.*?)$/gm, '<h3>$1</h3>')  // ### headers
-    .replace(/^## (.*?)$/gm, '<h2>$1</h2>')   // ## headers
-    .replace(/^# (.*?)$/gm, '<h1>$1</h1>')    // # headers
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/^- (.*?)$/gm, '<li>$1</li>');   // List items
+        .replace(/\n/g, '<br>')                    // Convert \n to <br>
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  // Convert **text** to <strong>
+        .replace(/\*(.*?)\*/g, '<em>$1</em>');     // Convert *text* to <em>
     
     messageDiv.innerHTML = formattedMessage;
     
