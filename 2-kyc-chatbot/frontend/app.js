@@ -11,7 +11,8 @@
 let conversationHistory = [];
 
 // Backend API URL (change this when deploying)
-const API_URL = 'http://localhost:5001';
+// const API_URL = 'http://localhost:5001';
+const API_URL = 'https://trustworthy-essence-production-324d.up.railway.app';
 
 // DOM elements
 const chatBox = document.getElementById('chatBox');
